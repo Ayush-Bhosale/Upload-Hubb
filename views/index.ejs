@@ -1,0 +1,58 @@
+<%- include ("includes/header") %>
+
+<div id="homeApp" style="margin-bottom: 80px; background-color: #000;">
+    <div class="container" id="features">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 style="color: white; font-weight: bold;">Upload Hubb</h1>
+                <p style="color: #d3d3d3; font-weight: 600;">@Flexagram</p>
+
+                <div class="gif-container">
+                    <img src="public/img/Upload.svg" alt="Downloading GIF" style="width: 50%; max-width: 600px;">
+                </div>
+                <div class="button-container" style="margin-top: 20px;">
+                    <a v-bind:href="mainURL + '/MyUploads'" class="btn btn-outline" style="border-color: rgb(119, 24, 227)"><span style="color: white;">Get Started</span></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Style the GIF container */
+    .gif-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 600px; /* Adjust as needed */
+    }
+
+    /* Style the button container */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Style the button */
+    .btn {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+</style>
+
+        
+<script>
+    const homeApp = Vue.createApp({
+        data() {
+            return {
+                mainURL: baseUrl,
+            }
+        }
+    });
+    homeApp.mount("#homeApp");
+</script>
+
+<%- include ("includes/footer") %>
